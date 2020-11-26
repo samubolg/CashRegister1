@@ -33,25 +33,41 @@ namespace CashRegister1
         }
         private void TotalButton_Click(object sender, EventArgs e)
         {
-            cheesecakeTotal = Convert.ToInt32(inputTextbox1.Text);
-            peaksTotal = Convert.ToInt32(inputTextbox2.Text);
-            candyAppleTotal = Convert.ToInt32(inputTextbox3.Text);
-            subtotalTotal = candyAppleTotal *candyApplesCost + peaksTotal * peaksCost + cheesecakeTotal * cheesecakesCost;
-            taxTotal = subtotalTotal * taxRate;
-            orderTotal = subtotalTotal + taxTotal;
-            outputLabel3.Text = orderTotal.ToString("C");
-            outputLabel2.Text = taxTotal.ToString("C");
-            outputLabel1.Text = subtotalTotal.ToString("C");            
+            try
+            {
+                cheesecakeTotal = Convert.ToInt32(inputTextbox1.Text);
+                peaksTotal = Convert.ToInt32(inputTextbox2.Text);
+                candyAppleTotal = Convert.ToInt32(inputTextbox3.Text);
+                subtotalTotal = candyAppleTotal * candyApplesCost + peaksTotal * peaksCost + cheesecakeTotal * cheesecakesCost;
+                taxTotal = subtotalTotal * taxRate;
+                orderTotal = subtotalTotal + taxTotal;
+                outputLabel3.Text = orderTotal.ToString("C");
+                outputLabel2.Text = taxTotal.ToString("C");
+                outputLabel1.Text = subtotalTotal.ToString("C");
+                noNumbersLabel1.Text = "";
+            }
+            catch
+            {
+                noNumbersLabel1.Text = "Please Enter a Numerical Value!";
+            }
         }
         private void ChangeButton_Click(object sender, EventArgs e)
         {
-            tenderedTotal = Convert.ToDouble(tenderedTextbox.Text);
-            changeTotal = tenderedTotal - orderTotal;
-            changeOutput.Text = changeTotal.ToString("C");
+            try
+            {
+                tenderedTotal = Convert.ToDouble(tenderedTextbox.Text);
+                changeTotal = tenderedTotal - orderTotal;
+                changeOutput.Text = changeTotal.ToString("C");
+                noNumbersLabel2.Text = "";
+            }
+            catch
+            {
+                noNumbersLabel2.Text = "Please Enter a Numerical Value!";
+            }
         }
         private void ChangeOutput_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void ReceiptButton_Click(object sender, EventArgs e)
@@ -89,7 +105,11 @@ namespace CashRegister1
             receiptLabel.Text += $"\nTendered              {tenderedTotal.ToString("C")}";
             Thread.Sleep(500);
             Refresh();
-            receiptLabel.Text += $"\nChange                {changeTotal.ToString("C")}";            
+            receiptLabel.Text += $"\nChange                {changeTotal.ToString("C")}";
+            receiptLabel.Text += $"\n";
+            Thread.Sleep(500);
+            Refresh();
+            receiptLabel.Text += $"\nHave a Nice Day!";
         }
 
         private void NewOrderButton_Click(object sender, EventArgs e)

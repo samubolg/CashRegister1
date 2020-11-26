@@ -36,7 +36,7 @@
             this.inputTextbox2 = new System.Windows.Forms.TextBox();
             this.inputTextbox3 = new System.Windows.Forms.TextBox();
             this.totalButton = new System.Windows.Forms.Button();
-            this.noNumbersLabel = new System.Windows.Forms.Label();
+            this.noNumbersLabel1 = new System.Windows.Forms.Label();
             this.headerLabel = new System.Windows.Forms.Label();
             this.subtotalLabel = new System.Windows.Forms.Label();
             this.taxLabel = new System.Windows.Forms.Label();
@@ -52,6 +52,7 @@
             this.outputLabel2 = new System.Windows.Forms.Label();
             this.outputLabel3 = new System.Windows.Forms.Label();
             this.changeOutput = new System.Windows.Forms.Label();
+            this.noNumbersLabel2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // receiptLabel
@@ -121,14 +122,13 @@
             this.totalButton.UseVisualStyleBackColor = true;
             this.totalButton.Click += new System.EventHandler(this.TotalButton_Click);
             // 
-            // noNumbersLabel
+            // noNumbersLabel1
             // 
-            this.noNumbersLabel.Font = new System.Drawing.Font("Baskerville Win95BT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noNumbersLabel.Location = new System.Drawing.Point(145, 186);
-            this.noNumbersLabel.Name = "noNumbersLabel";
-            this.noNumbersLabel.Size = new System.Drawing.Size(215, 23);
-            this.noNumbersLabel.TabIndex = 9;
-            this.noNumbersLabel.Text = "Please Enter a Numerical Value";
+            this.noNumbersLabel1.Font = new System.Drawing.Font("Baskerville Win95BT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noNumbersLabel1.Location = new System.Drawing.Point(145, 186);
+            this.noNumbersLabel1.Name = "noNumbersLabel1";
+            this.noNumbersLabel1.Size = new System.Drawing.Size(215, 23);
+            this.noNumbersLabel1.TabIndex = 9;
             // 
             // headerLabel
             // 
@@ -261,11 +261,20 @@
             this.changeOutput.TabIndex = 25;
             this.changeOutput.Click += new System.EventHandler(this.ChangeOutput_Click);
             // 
+            // noNumbersLabel2
+            // 
+            this.noNumbersLabel2.Font = new System.Drawing.Font("Baskerville Win95BT", 10F);
+            this.noNumbersLabel2.Location = new System.Drawing.Point(148, 414);
+            this.noNumbersLabel2.Name = "noNumbersLabel2";
+            this.noNumbersLabel2.Size = new System.Drawing.Size(248, 23);
+            this.noNumbersLabel2.TabIndex = 26;
+            // 
             // CashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 519);
+            this.Controls.Add(this.noNumbersLabel2);
             this.Controls.Add(this.changeOutput);
             this.Controls.Add(this.outputLabel3);
             this.Controls.Add(this.outputLabel2);
@@ -281,7 +290,7 @@
             this.Controls.Add(this.taxLabel);
             this.Controls.Add(this.subtotalLabel);
             this.Controls.Add(this.headerLabel);
-            this.Controls.Add(this.noNumbersLabel);
+            this.Controls.Add(this.noNumbersLabel1);
             this.Controls.Add(this.totalButton);
             this.Controls.Add(this.inputTextbox3);
             this.Controls.Add(this.inputTextbox2);
@@ -307,7 +316,7 @@
         private System.Windows.Forms.TextBox inputTextbox2;
         private System.Windows.Forms.TextBox inputTextbox3;
         private System.Windows.Forms.Button totalButton;
-        private System.Windows.Forms.Label noNumbersLabel;
+        private System.Windows.Forms.Label noNumbersLabel1;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Label subtotalLabel;
         private System.Windows.Forms.Label taxLabel;
@@ -323,6 +332,7 @@
         private System.Windows.Forms.Label outputLabel2;
         private System.Windows.Forms.Label outputLabel3;
         private System.Windows.Forms.Label changeOutput;
+        private System.Windows.Forms.Label noNumbersLabel2;
     }
 }
 
