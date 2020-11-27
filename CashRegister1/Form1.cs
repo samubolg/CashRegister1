@@ -73,42 +73,43 @@ namespace CashRegister1
         private void ReceiptButton_Click(object sender, EventArgs e)
         {
             receiptLabel.Text = "RMCF .INC";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nOrder Number: 1477";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nNovember 26 2020";
             receiptLabel.Text += $"\n";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nChocolate Cheesecake x{cheesecakeTotal} @ {cheesecakesCost.ToString("C")}";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nPeaks                x{peaksTotal} @ {peaksCost.ToString("C")}";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nCandy Apples         x{candyAppleTotal} @ {candyApplesCost.ToString("C")}";
             receiptLabel.Text += $"\n";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nSubtotal              {subtotalTotal.ToString("C")}";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nTax                   {taxTotal.ToString("C")}";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nTotal                 {orderTotal.ToString("C")}";
             receiptLabel.Text += $"\n";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nTendered              {tenderedTotal.ToString("C")}";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
             receiptLabel.Text += $"\nChange                {changeTotal.ToString("C")}";
             receiptLabel.Text += $"\n";
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Refresh();
+            receiptLabel.Text += $"\nThank You For Shopping At Rocky Mountain Chocolate Factory";
             receiptLabel.Text += $"\nHave a Nice Day!";
         }
 
@@ -131,6 +132,21 @@ namespace CashRegister1
             outputLabel2.Text = "";
             outputLabel3.Text = "";
             receiptLabel.Text = "";
+        }
+
+        private void CashRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OutputLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InputLabel3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
